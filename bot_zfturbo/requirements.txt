@@ -1,0 +1,7 @@
+opencv-python>=4.1.2.30
+tensorflow==2.5.0
+Keras==2.4.3
+Keras-Applications==1.0.8
+Keras-Preprocessing==1.1.2
+albumentations>=0.5.2
+kito==1.0.5
