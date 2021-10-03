@@ -15,7 +15,7 @@ class Bot(metaclass=ABCMeta):
     def __init__(self, api_version, username, password, email_address, logs_dir, data_dir,
                  start_time=None, duration=None):
         self.api = self._get_api(api_version)
-        self.username = username
+        self.username = username + " " + u"\U0001F916"
         self.password = password
         self.email_address = email_address
         self.start_time = start_time
