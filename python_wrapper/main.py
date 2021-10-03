@@ -1,12 +1,15 @@
-from api import Api
+from python_wrapper.api import Api
 
 api = Api('https://dev.stallcatchers.com')
 
 # Register the bot in.
 
-register_result = api.register(username='', password='', email='')
+register_result = api.register(username='ZFTurbo', password='pass123_turbo', email='zf-turbo@yandex.ru')
+print('Reg result: {}'.format(register_result))
 if register_result == 422:
-    api.login(username='', password='')
+    api.login(username='ZFTurbo', password='pass123_turbo')
+
+print(api.movie())
 
 # Request first movie
 movie = api.movie()['movie']['id']

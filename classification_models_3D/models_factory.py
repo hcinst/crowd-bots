@@ -1,16 +1,16 @@
 import functools
 import keras_applications as ka
 
-from .models import resnet as rn
-from .models import resnext as rx
-from .models import senet as sn
-from .models import densenet as dn
-from .models import vgg16 as vgg16
-from .models import vgg19 as vgg19
-from .models import inception_resnet_v2 as irv2
-from .models import inception_v3 as iv3
-from .models import mobilenet as mb1
-from .models import mobilenet_v2 as mb2
+from .models1 import resnet as rn
+from .models1 import resnext as rx
+from .models1 import senet as sn
+from .models1 import densenet as dn
+from .models1 import vgg16 as vgg16
+from .models1 import vgg19 as vgg19
+from .models1 import inception_resnet_v2 as irv2
+from .models1 import inception_v3 as iv3
+from .models1 import mobilenet as mb1
+from .models1 import mobilenet_v2 as mb2
 
 
 class ModelsFactory:
