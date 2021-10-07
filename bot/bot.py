@@ -123,14 +123,17 @@ class Bot(metaclass=ABCMeta):
                     urllib.request.urlretrieve(movie_url, self.movie_path)
                     movie_error = 0
                     bot_answer = self._process_movie()
+                    if bot_answer is None:
+                        print(movie_url)
+                        movie_error = 1
+                        bot_answer = 0
                 except Exception as e:
                     print(e)
                     print(movie_url)
                     movie_error = 1
                     bot_answer = 0
-                if bot_answer is not None:
-                    self.api.save_movie_answer(movieId=movie_id, answer=bot_answer, movieError=movie_error)
-                    logging.info(str(movie_id) + "," + str(num_frames) + "," + str(bot_answer))
+                self.api.save_movie_answer(movieId=movie_id, answer=bot_answer, movieError=movie_error)
+                logging.info(str(movie_id) + "," + str(num_frames) + "," + str(bot_answer))
                 tally += 1
                 print(str(tally) + ". " + str(movie_id) + " - " + str(bot_answer))
             except Exception as e:
