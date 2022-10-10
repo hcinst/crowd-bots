@@ -1,0 +1,5 @@
+Winning machine learning models from the Driven Data clogloss competition that have
+been used successfully as CrowdBots in pilot studies at the Human Computation institute.
+Everything needed to replicate the creation of these models, including training data is provided.
+
+https://github.com/drivendataorg/clog-loss-alzheimers-research/
